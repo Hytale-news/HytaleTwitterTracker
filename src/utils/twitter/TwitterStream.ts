@@ -2,6 +2,7 @@
 // https://developer.twitter.com/en/docs/twitter-api/tweets/filtered-stream/quick-start
 
 import needle from "needle";
+import { StreamRules } from "./StreamRules";
 // The code below sets the bearer token from your environment variables
 // To set environment variables on macOS or Linux, run the export command below from the terminal:
 // export BEARER_TOKEN='YOUR-TOKEN'
@@ -23,7 +24,7 @@ const rules = [
     }
 ];
 
-async function getAllRules() {
+async function getAllRules(): Promise<StreamRules> {
     const response = await needle('get', rulesURL, {
         headers: {
             "authorization": `Bearer ${token}`

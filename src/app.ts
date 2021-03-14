@@ -1,4 +1,4 @@
-import { streamConnect, getAllRules, deleteAllRules, setRules } from "./monitor/twitter-stream";
+import { streamConnect, getAllRules, deleteAllRules, setRules } from "./utils/twitter/TwitterStream";
 require("dotenv").config();
 
 (async () => {
